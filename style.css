@@ -1,0 +1,45 @@
+.outer-dock{
+    justify-content: center;
+    align-items: center;
+    width: 27%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #f0f0f0;
+}
+.row{
+    display: flex;
+    gap: 15px;
+
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border-radius: 15px;
+    margin-top: 10px;
+    position: relative;
+    cursor: pointer;
+    
+}
+.row img{
+    position: absolute;
+    display: none;
+}
+.row img.aktiv {
+    display: block;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.choice{
+    color: red;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    
+}
+.choice img{
+    display: none;
+}
