@@ -1,20 +1,19 @@
-let choosen = 0;
+let turn = "X";
 
-function choosingFigure(){
-    let xrasm = document.getElementById("xrasm");
-    let orasm = document.getElementById("orasm");
+function choosingFigure(cell){
+    if (cell.classList.contains("band")) return;
+    
+    let orasm = cell.children[0];
+    let xrasm = cell.children[1];
 
-    choosen++;
-
-    if(choosen === 1){
+    if(turn === "X"){
+        xrasm.classList.remove("hide");
         xrasm.classList.add("aktiv");
-        orasm.classList.remove("aktiv");
-    }else if (choosen === 2){
-        xrasm.classList.remove("aktiv");
+        turn = "O";
+    }else {
+        orasm.classList.remove("hide"); 
         orasm.classList.add("aktiv");
-    }else{
-        xrasm.classList.remove("aktiv");
-        orasm.classList.remove("aktiv");
-        choosen = 0;
+        turn = "X";
     }
+    cell.classList.add("band");
 }

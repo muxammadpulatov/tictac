@@ -1,45 +1,61 @@
-.outer-dock{
-    justify-content: center;
-    align-items: center;
-    width: 27%;
+.outer-dock {
     height: 100%;
-    border-radius: 15px;
-    background-color: #f0f0f0;
-}
-.row{
+    width: 100%;
     display: flex;
+    justify-content: center;
+}
+
+.inner-dock {
+    height: 35rem;
+    width: 25rem;
+    padding: 20px;
+    background-color: #d6cc9f;
+    border-radius: 15px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
     gap: 15px;
 
 }
+
 .cell {
-    width: 100px;
-    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
     background-color: aqua;
     border-radius: 15px;
     margin-top: 10px;
     position: relative;
     cursor: pointer;
-    
+
 }
-.row img{
+
+.row img {
     position: absolute;
     display: none;
 }
+
 .row img.aktiv {
     display: block;
 }
+
 img {
     width: 100%;
     height: 100%;
 }
 
-.choice{
+.choice {
     color: red;
     height: 100px;
     width: 100px;
     cursor: pointer;
-    
+
 }
-.choice img{
+
+.choice img {
     display: none;
 }
