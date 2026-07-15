@@ -9,55 +9,60 @@
 </head>
 
 <body>
-    <div class="outer-dock">
-        <div class="inner-dock" >
-            <h1>tic tac toe oyini</h1>
-            <h2>x birinchi boshlaydi</h2>
-            <div class="row">
-                <div class="cell" onclick="choosingFigure(this)">
-                    <img src="images/o.png" alt="o_image" id="1rasm" class="hide">
-                    <img src="images/x.png" alt="x_image" id="1_1rasm" class="hide">
+    <div class="game-container">
+        <div class="outer-dock">
+            <div class="inner-dock">
+                <h1>tic tac toe oyini</h1>
+                <h2>x birinchi boshlaydi</h2>
+                <div class="row">
+                    <div class="cell" onclick="choosingFigure(this)">
+                        <img src="images/o.png" alt="o_image" id="1rasm" class="hide">
+                        <img src="images/x.png" alt="x_image" id="1_1rasm" class="hide">
+                    </div>
+                    <div class="cell" onclick="choosingFigure(this)">
+                        <img src="images/o.png" alt="o_image" id="2rasm" class="hide">
+                        <img src="images/x.png" alt="x_image" id="2_1rasm" class="hide">
+                    </div>
+                    <div class="cell" onclick="choosingFigure(this)">
+                        <img src="images/o.png" alt="o_image" id="3rasm" class="hide">
+                        <img src="images/x.png" alt="x_image" id="3_1rasm" class="hide">
+                    </div>
                 </div>
-                <div class="cell" onclick="choosingFigure(this)">
-                    <img src="images/o.png" alt="o_image" id="2rasm" class="hide">
-                    <img src="images/x.png" alt="x_image" id="2_1rasm" class="hide">
+                <div class="row">
+                    <div class="cell" onclick="choosingFigure(this)">
+                        <img src="images/o.png" alt="o_image" id="4rasm" class="hide">
+                        <img src="images/x.png" alt="x_image" id="4_1rasm" class="hide">
+                    </div>
+                    <div class="cell" onclick="choosingFigure(this)">
+                        <img src="images/o.png" alt="o_image" id="5rasm" class="hide">
+                        <img src="images/x.png" alt="x_image" id="5_1rasm" class="hide">
+                    </div>
+                    <div class="cell" onclick="choosingFigure(this)">
+                        <img src="images/o.png" alt="o_image" id="6rasm" class="hide">
+                        <img src="images/x.png" alt="x_image" id="6_1rasm" class="hide">
+                    </div>
                 </div>
-                <div class="cell" onclick="choosingFigure(this)">
-                    <img src="images/o.png" alt="o_image" id="3rasm" class="hide">
-                    <img src="images/x.png" alt="x_image" id="3_1rasm" class="hide">
-                </div>
-            </div>
-            <div class="row">
-                <div class="cell" onclick="choosingFigure(this)">
-                    <img src="images/o.png" alt="o_image" id="4rasm" class="hide">
-                    <img src="images/x.png" alt="x_image" id="4_1rasm" class="hide">
-                </div>
-                <div class="cell" onclick="choosingFigure(this)">
-                    <img src="images/o.png" alt="o_image" id="5rasm" class="hide">
-                    <img src="images/x.png" alt="x_image" id="5_1rasm" class="hide">
-                </div>
-                <div class="cell" onclick="choosingFigure(this)">
-                    <img src="images/o.png" alt="o_image" id="6rasm" class="hide">
-                    <img src="images/x.png" alt="x_image" id="6_1rasm" class="hide">
-                </div>
-            </div>
-            <div class="row">
-                <div class="cell" onclick="choosingFigure(this)">
-                    <img src="images/o.png" alt="o_image" id="7rasm" class="hide">
-                    <img src="images/x.png" alt="x_image" id="7_1rasm" class="hide">
-                </div>
-                <div class="cell" onclick="choosingFigure(this)">
-                    <img src="images/o.png" alt="o_image" id="8rasm" class="hide">
-                    <img src="images/x.png" alt="x_image" id="8_1rasm" class="hide">
-                </div>
-                <div class="cell" onclick="choosingFigure(this)">
-                    <img src="images/o.png" alt="o_image" id="9rasm" class="hide">
-                    <img src="images/x.png" alt="x_image" id="9_1rasm" class="hide">
+                <div class="row">
+                    <div class="cell" onclick="choosingFigure(this)">
+                        <img src="images/o.png" alt="o_image" id="7rasm" class="hide">
+                        <img src="images/x.png" alt="x_image" id="7_1rasm" class="hide">
+                    </div>
+                    <div class="cell" onclick="choosingFigure(this)">
+                        <img src="images/o.png" alt="o_image" id="8rasm" class="hide">
+                        <img src="images/x.png" alt="x_image" id="8_1rasm" class="hide">
+                    </div>
+                    <div class="cell" onclick="choosingFigure(this)">
+                        <img src="images/o.png" alt="o_image" id="9rasm" class="hide">
+                        <img src="images/x.png" alt="x_image" id="9_1rasm" class="hide">
+                    </div>
                 </div>
             </div>
         </div>
-
+        <div class="restart">
+        <button onclick="location.reload()"><img src="images/restart.svg" alt="restart_img"></button>
     </div>
+    </div>
+    
     <script src="main.js"></script>
 </body>
 

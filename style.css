@@ -1,3 +1,9 @@
+.game-container {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+
 .outer-dock {
     height: 100%;
     width: 100%;
@@ -58,4 +64,28 @@ img {
 
 .choice img {
     display: none;
+}
+.restart{
+    position: absolute;
+    bottom: 5px;
+    left: 100%;
+    margin-left: 5px;
+}
+
+.restart button {
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 15px;
+    color: white;
+    font-size: 2rem;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.restart button:hover {
+    background-color: #afa5a5;
+    transform: scale(1.05);
 }
