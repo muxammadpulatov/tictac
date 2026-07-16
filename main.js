@@ -1,5 +1,7 @@
 let turn = "X";
 
+let gameState = [ "", "", "", "", "", "", "", "", ""];
+
 function choosingFigure(cell) {
     if (cell.classList.contains("busy")) return;
 
@@ -19,5 +21,4 @@ function choosingFigure(cell) {
     }
     cell.classList.add("band");
 }
-
 
