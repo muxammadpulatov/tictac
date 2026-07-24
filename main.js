@@ -1,6 +1,12 @@
 let turn = "X";
+let finished = false;
 
-function choosingFigure(cell) {
+let options = ["X", "", "", "", "", "", "", "", ""];
+
+
+function choosingFigure(cell, index) {
+    if (finished) return;
+
     if (cell.classList.contains("busy")) return;
 
     let orasm = cell.children[0];
@@ -10,14 +16,18 @@ function choosingFigure(cell) {
         xrasm.classList.remove("hide");
         xrasm.classList.add("aktiv");
         turn = "O";
-        document.querySelector("h2").innerText = " O ning navbati"
+        document.querySelector("h2").innerText = "O ning navbati";
+        options[index] = 'X';
     } else {
         orasm.classList.remove("hide");
         orasm.classList.add("aktiv");
         turn = "X";
-        document.querySelector("h2").innerText = " X ning navbati"
+        document.querySelector("h2").innerText = "X ning navbati";
+        options[index] = 'O';
     }
+
     cell.classList.add("band");
+    finished = check();
 }
 
 const winConditions = [
@@ -29,6 +39,24 @@ const winConditions = [
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6],
-]; 
+];
 
-let options = ["", "", "", "", "", "", "", "", "" ];
+
+function check() {
+    for (var i = 0; i < winConditions.length; i++) {
+        var tmp = "";
+        for (var j = 0; j < winConditions[i].length; j++) {
+            if (options[winConditions[i][j]] == "") {
+                tmp = "";
+                break;
+            } else if (tmp == "") {
+                tmp = options[winConditions[i][j]];
+            } else if (tmp != options[winConditions[i][j]]) {
+                tmp = "";
+                break;
+            }
+        }
+        if (tmp != "") return true;
+    }
+    return false;
+}
